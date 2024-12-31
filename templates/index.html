@@ -1,0 +1,10 @@
+{{ define "content" }}
+<h2>Blog Posts</h2>
+<ul>
+  {{ range . }}
+  <li>
+    <a href="/post?id={{ .ID }}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

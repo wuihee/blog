@@ -1,0 +1,21 @@
+{{ define "layout" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wuihee Sucks at Coding</title>
+</head>
+<body>
+  <header>
+    <h1>Wuihee Sucks at Coding</h1>
+    <nav>
+      <a href="/">Home</a>
+    </nav>
+  </header>
+  <main>
+    {{ template "content" . }}
+  </main>
+</body>
+</html>
+{{ end }}

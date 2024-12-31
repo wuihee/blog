@@ -1,15 +1,12 @@
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: cosmtrek/air
     ports:
       - 8080:8080
     volumes:
-      - ./static:/root/static
-      - ./templates:/root/templates
-    depends_on:
-      - db
+      - .:/go/src/app # Mount the local directory into the container
+    working_dir: /go/src/app
+    command: ["air"]
 
   db:
     image: keinos/sqlite3:latest
