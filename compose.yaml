@@ -6,14 +6,4 @@ services:
     volumes:
       - .:/go/src/app # Mount the local directory into the container
     working_dir: /go/src/app
-    command: ["air"]
-
-  db:
-    image: keinos/sqlite3:latest
-    container_name: sqlite
-    volumes:
-      - sqlite_data:/data
-    command: ["sqlite3", "/data/blog.db"]
-
-volumes:
-  sqlite_data:
+    command: ["air", "-d"]
